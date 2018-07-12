@@ -1,46 +1,10 @@
-# Frame
+# Pintortico Backend
 
-A user system API starter. Bring your own front-end.
-
-[![Build Status](https://travis-ci.org/jedireza/frame.svg?branch=master)](https://travis-ci.org/jedireza/frame)
-[![Dependency Status](https://david-dm.org/jedireza/frame.svg?style=flat)](https://david-dm.org/jedireza/frame)
-[![devDependency Status](https://david-dm.org/jedireza/frame/dev-status.svg?style=flat)](https://david-dm.org/jedireza/frame#info=devDependencies)
-
-
-## Features
-
- - Login system with forgot password and reset password
- - Abusive login attempt detection
- - User roles for accounts and admins
- - Admins only notes and status history for accounts
- - Admin groups with shared permissions
- - Admin level permissions that override group permissions
-
+This project contains the backend services to provide content and extra functionality to Max Rojas' website.
 
 ## Technology
 
-Frame is built with the [hapi](https://hapijs.com/) framework. We're
-using [MongoDB](http://www.mongodb.org/) as a data store.
-
-
-## Bring your own front-end
-
-Frame is only a restful JSON API. If you'd like a ready made front-end,
-checkout [Aqua](https://github.com/jedireza/aqua). Or better yet, fork
-this repo and build one on top of Frame.
-
-
-## Live demo
-
-| url                                                                                                | username | password |
-|:-------------------------------------------------------------------------------------------------- |:-------- |:-------- |
-| [https://getframe.herokuapp.com/](https://getframe.herokuapp.com/)                                 | root     | root     |
-| [https://getframe.herokuapp.com/documentation](https://getframe.herokuapp.com/documentation)       |          |          |
-
-[Postman](http://www.getpostman.com/) is a great tool for testing and
-developing APIs. See the wiki for details on [how to
-login](https://github.com/jedireza/frame/wiki/How-to-login).
-
+Frame is built with the [hapi](https://hapijs.com/) framework.
 
 ## Requirements
 
@@ -51,8 +15,8 @@ You need [Node.js](http://nodejs.org/download/) `>=8.x` and you'll need a
 ## Installation
 
 ```bash
-$ git clone https://github.com/jedireza/frame.git
-$ cd frame
+$ git clone git@github.com:rojasmi1/pintortico-backend.git
+$ cd pintortico-backend
 $ npm install
 ```
 
@@ -68,8 +32,7 @@ __Instead, access secrets via environment variables.__ We use
 [`dotenv`](https://github.com/motdotla/dotenv) to help make setting local
 environment variables easy (not to be used in production).
 
-Simply copy `.env-sample` to `.env` and edit as needed. __Don't commit `.env`
-to your repository.__
+__Don't commit `.env` to your repository.__
 
 
 ## Running the app
@@ -95,7 +58,7 @@ code and restarts the app automatically.
 ```bash
 $ npm run inspect
 
-# > frame@0.0.0 inspect /home/jedireza/projects/frame
+# > pintortico-backend@0.0.0 inspect /home/mrojas/workspace/pintortico-backend
 # > nodemon --inspect -e js,md server.js
 
 # [nodemon] 1.14.12
@@ -130,41 +93,6 @@ these environment variables in your production environment:
    setup script.
 
 
-## Have a question?
-
-Any issues or questions (no matter how basic), open an issue. Please take the
-initiative to read relevant documentation and be pro-active with debugging.
-
-
-## Want to contribute?
-
-Contributions are welcome. If you're changing something non-trivial, you may
-want to submit an issue before creating a large pull request.
-
-
-```bash
-$ npm test
-
-# > frame@0.0.0 test /home/jedireza/projects/frame
-# > lab -c -L
-
-#  ..................................................
-#  ..................................................
-#  ..................................................
-#  ..............
-
-# 164 tests complete
-# Test duration: 14028 ms
-# No global variable leaks detected
-# Coverage: 100.00%
-# Linting results: No issues
-```
-
 ## License
 
 MIT
-
-
-## Don't forget
-
-What you build with Frame is more important than Frame.
