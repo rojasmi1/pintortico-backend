@@ -12,7 +12,7 @@ const criteria = {
 
 const config = {
     $meta: 'This file configures the plot device.',
-    projectName: 'Frame',
+    projectName: 'Pintortico',
     port: {
         web: {
             $filter: 'env',
@@ -21,46 +21,30 @@ const config = {
             $default: 9000
         }
     },
-    authAttempts: {
-        forIp: 50,
-        forIpAndUser: 7
-    },
-    hapiMongoModels: {
-        mongodb: {
-            connection: {
-                uri: {
-                    $filter: 'env',
-                    production: process.env.MONGODB_URI,
-                    $default: 'mongodb://localhost:27017/'
-                },
-                db: {
-                    $filter: 'env',
-                    production: process.env.MONGODB_DB_NAME,
-                    test: 'frame-test',
-                    $default: 'frame'
-                }
-            }
-        },
-        autoIndex: true
-    },
     nodemailer: {
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
-            user: 'jedireza@gmail.com',
+            user: 'michaelrojasp@gmail.com',
             pass: process.env.SMTP_PASSWORD
         }
     },
     system: {
         fromAddress: {
-            name: 'Frame',
-            address: 'jedireza@gmail.com'
+            name: 'Michael Rojas',
+            address: 'michaelrojasp@gmail.com'
         },
         toAddress: {
-            name: 'Frame',
-            address: 'jedireza@gmail.com'
+            name: 'Michael Rojas',
+            address: 'michaelrojasp@gmail.com'
         }
+    },
+    cloudinary: {
+        cloud_name: 'ddi2el7ue',
+        api_url: 'https://api.cloudinary.com/v1_1/ddi2el7ue',
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET
     }
 };
 

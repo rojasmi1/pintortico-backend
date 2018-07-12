@@ -72,25 +72,6 @@ Simply copy `.env-sample` to `.env` and edit as needed. __Don't commit `.env`
 to your repository.__
 
 
-## First time setup
-
-__WARNING__: This will clear all data in the following MongoDB collections if
-they exist: `accounts`, `adminGroups`, `admins`, `authAttempts`, `sessions`,
-`statuses`, and `users`.
-
-```bash
-$ npm run first-time-setup
-
-# > frame@0.0.0 first-time-setup /home/jedireza/projects/frame
-# > node first-time-setup.js
-
-# MongoDB URL: (mongodb://localhost:27017/frame)
-# Root user email: jedireza@gmail.com
-# Root user password:
-# Setup complete.
-```
-
-
 ## Running the app
 
 ```bash
@@ -161,11 +142,6 @@ Contributions are welcome. If you're changing something non-trivial, you may
 want to submit an issue before creating a large pull request.
 
 
-## Running tests
-
-[Lab](https://github.com/hapijs/lab) is part of the hapi ecosystem and what we
-use to write all of our tests.
-
 ```bash
 $ npm test
 
@@ -182,17 +158,6 @@ $ npm test
 # No global variable leaks detected
 # Coverage: 100.00%
 # Linting results: No issues
-```
-
-### Targeted tests
-
-If you'd like to run a specific test or subset of tests you can use the
-`test-server` npm script.
-
-You specificy the path(s) via the `TEST_TARGET` environment variable like:
-
-```bash
-$ TEST_TARGET=test/server/web/main.js npm run test-server
 ```
 
 ## License
