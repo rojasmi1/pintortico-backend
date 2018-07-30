@@ -17,9 +17,10 @@ const manifest = {
             request: ['error']
         },
         routes: {
-            security: false
+            security: false,
+            cors: true
         },
-        host: 'localhost',
+        host: '127.0.0.1',
         port: Config.get('/port/web')
     },
     register: {

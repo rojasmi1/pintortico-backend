@@ -4,7 +4,8 @@
   "description": "Pintortico Backend services",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,md server.js",
+    "start": "node server.js",
+    "start:dev": "nodemon -e js,md server.js",
     "inspect": "nodemon --inspect -e js,md server.js"
   },
   "author": "Michael Rojas",
