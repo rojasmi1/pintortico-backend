@@ -21,6 +21,14 @@ const config = {
             $default: 9000
         }
     },
+    swagger: {
+        host: {
+            $filter: 'env',
+            test: '0.0.0.0:9000',
+            production: 'pintortico-backend.herokuapp.com',
+            default: '0.0.0.0:9000'
+        }
+    },
     nodemailer: {
         host: 'smtp.gmail.com',
         port: 465,

@@ -39,6 +39,7 @@ const manifest = {
                         version: Package.version,
                         description: `API Documentation`
                     },
+                    host: Config.get('/swagger/host'),
                     grouping: 'tags',
                     sortTags: 'name',
                     tags: [
