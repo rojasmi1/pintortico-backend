@@ -35,7 +35,7 @@ class ImageController {
                     id: public_id,
                     width,
                     height,
-                    meta: context.custom,
+                    meta: context ? context.custom : {},
                     tags,
                     src: secure_url
                 };
