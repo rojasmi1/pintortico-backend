@@ -31,11 +31,14 @@ class ImageController {
                     tags,
                     secure_url
                 } = resource;
+
+                const meta = (context && context.custom) || {};
                 const image = {
                     id: public_id,
                     width,
                     height,
-                    meta: context ? context.custom : {},
+                    meta,
+                    alt: meta.alt,
                     tags,
                     src: secure_url
                 };
