@@ -13,7 +13,7 @@ jobs:
           command: sudo pip install awsebcli --upgrade
       - run:
           name: Deploy to Beanstalk
-          command: eb deploy pintortico-api
+          command: eb deploy pintortico-backend
 
 workflows:
   version: 2
