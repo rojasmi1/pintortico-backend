@@ -1,0 +1,10 @@
+branch-defaults:
+  master:
+    environment: PintorticoBackend-env
+  develpop:
+    environment: PintorticoBackend-env
+global:
+  application_name: pintortico-backend
+  default_platform: Node.js running on 64bit Amazon Linux/4.5.3
+  default_region: eu-east-2
+  sc: git
