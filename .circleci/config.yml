@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  deploy:
+  build:
     docker:
       - image: circleci/python:2.7-jessie
 
@@ -8,6 +8,12 @@ jobs:
 
     steps:
       - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
       - run:
           name: Install awsebcli
           command: sudo pip install awsebcli --upgrade
@@ -15,11 +21,16 @@ jobs:
           name: Deploy to Beanstalk
           command: eb deploy pintortico-backend
 
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
 workflows:
   version: 2
-  build-deploy:
+  build:
     jobs:
-      - deploy:
+      - build:
           filters:
             branches:
               only: develop, master
