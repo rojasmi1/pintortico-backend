@@ -20,8 +20,6 @@ workflows:
   build-deploy:
     jobs:
       - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: develop, master
